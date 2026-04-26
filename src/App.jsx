@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Destinations from './pages/passager/Destinations';
+import Reservations from './pages/passager/Reservations';
 
 // Auth
 import Login from './pages/auth/Login';
@@ -26,17 +28,22 @@ function App() {
         <Route path="/register" element={<Register />} />
 
         {/* Pages à ajouter au fur et à mesure */}
-        {/* 
+        
         <Route path="/destinations" element={
           <ProtectedRoute role="passager">
             <Destinations />
           </ProtectedRoute>
         }/> 
-        */}
-
+	 
+	<Route path="/reservation" element={
+	  <ProtectedRoute role="passager">
+	    <Reservation />
+	  </ProtectedRoute>
+	}/>        
       </Routes>
     </BrowserRouter>
   );
 }
+
 
 export default App;
