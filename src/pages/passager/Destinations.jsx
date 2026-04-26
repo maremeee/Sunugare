@@ -18,7 +18,7 @@ function Destinations() {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.get('http://localhost:8000/api/destinations', {
-        headers: { Authorization: Bearer ${token} }
+        headers: { Authorization: `Bearer ${token}` }
       });
       setDestinations(response.data);
     } catch (err) {

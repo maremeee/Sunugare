@@ -30,7 +30,7 @@ function Reservation() {
           destination_id: destination.id,
           ...formData,
         },
-        { headers: { Authorization: Bearer ${token} } }
+        { headers: { Authorization: `Bearer ${token}` } }
       );
       navigate('/mon-ticket', { state: { billet: response.data } });
     } catch (err) {
@@ -143,7 +143,7 @@ function Reservation() {
             disabled={loading}
             style={styles.button}
           >
-            {loading ? 'Traitement...' : Confirmer — ${total} FCFA}
+            {loading ? 'Traitement...' : `Confirmer — ${total} FCFA`}
           </button>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Destinations from './pages/passager/Destinations';
-import Reservations from './pages/passager/Reservations';
+import Reservation from './pages/passager/Reservation';
 
 // Auth
 import Login from './pages/auth/Login';
